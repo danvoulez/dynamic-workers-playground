@@ -214,7 +214,7 @@ export default {
           bundleInfo: null,
           buildTime: 0,
         };
-        const contextExports = (ctx as unknown as { exports: LoaderExports }).exports;
+        const contextExports = runtimeExports;
 
         const worker = env.LOADER.get(workerId, async () => {
           const buildStart = Date.now();
